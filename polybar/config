@@ -530,7 +530,7 @@ tail = true
 format =     <label>
 format-foreground = ${colors.green}
 format-underline = ${colors.green}
-label = %output% updates left
+label = %output% update(s) left
 
 click-left = alacritty -e yay -Syu
 
