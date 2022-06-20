@@ -523,7 +523,7 @@ label = %output%
 
 [module/packages]
 type = custom/script
-exec = calc $(pacman -Qu | wc -l) + $(yay -Qu | wc -l) -4
+exec = pacman -Qu | wc -l
 interval = 10
 tail = true
 
