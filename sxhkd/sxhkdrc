@@ -2,10 +2,6 @@
 # DMENU SCRIPTS #
 #################
 
-# terminal emulator
-super + Return
-	alacritty
-
 # program launcher
 super + r
   python3 /home/samy/.config/dmenu/run.py
@@ -15,8 +11,8 @@ super + c
 	python3 /home/samy/.config/dmenu/config.py
 
 # productivity
-super + p
-	python3 /home/samy/.config/dmenu/productivity.py
+# super + p
+	# python3 /home/samy/.config/dmenu/productivity.py
 
 # google search
 super + g
@@ -34,9 +30,17 @@ super + w
 super + shift + q
 	python3 /home/samy/.config/dmenu/exit.py
 
+# Password Manager
+super + p
+	python3 /home/samy/.config/dmenu/password.py
+
 ##########################
 # WM INDEPENDENT HOTKEYS #
 ##########################
+
+# terminal emulator
+super + Return
+	alacritty
 
 # make sxhkd reload its configuration files:
 super + Escape

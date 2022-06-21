@@ -40,9 +40,9 @@ yellow = #ecbe7b
 blue = #51afbb
 
 [bar/topbar]
-width = 99%
+width = 99.5%
 height = 30
-offset-x = 0.5%
+offset-x = 0.25%
 offset-y = 0.5%
 radius = 10.0
 fixed-center = true
