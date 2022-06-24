@@ -40,6 +40,7 @@ Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -63,7 +64,7 @@ let g:onedark_terminal_italics=1
 let g:onedark_hide_endofbuffer=1
 let g:onedark_termcolors=256
 let g:airline_theme='onedark'
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 colorscheme onedark
 let g:lightline = {'colorscheme' : 'onedark'}
 set laststatus=2
