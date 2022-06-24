@@ -47,6 +47,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jreybert/vimagit'
 
 call plug#end()
 
@@ -117,6 +118,10 @@ inoremap <C-q> :tabclose
 nnoremap <C-Esc> :nohlsearch
 nnoremap <C-b> :NERDTreeToggle%<CR>
 nnoremap <C-f> :NERDTreeFind%<CR>
+nnoremap <C-A-g> :Magit<CR>
+nnoremap <C-S-g> :! git push<CR>
+
+let g:magit_discard_untracked_do_delete=1
 
 let g:Hexokinase_highlighters = ['virtual']
 

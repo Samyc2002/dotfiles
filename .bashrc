@@ -196,6 +196,10 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gP='git pull'
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
