@@ -29,7 +29,8 @@
 ;==========================================================
 
 [colors]
-background = #282c34
+;background = #282c34
+background = #323845
 background-alt = #969696
 foreground = #bbc2cf
 foreground-alt = #D9E1EE

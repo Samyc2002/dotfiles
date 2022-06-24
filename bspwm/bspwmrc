@@ -15,11 +15,12 @@ volumeicon &
 nm-applet &
 blueman-applet &
 clipmenud &
+dunst -print &
 
 #################################################
 #                 WM WORKSPACES                 #
 #################################################
-bspc monitor -d "      " "      " "       " "       " "       " "       " "       " "       " "       "
+bspc monitor -d "      " "      " "       " "       " "       " "       " "       " "       " "       "
 
 #################################################
 #                WM CONFIGURATION               #

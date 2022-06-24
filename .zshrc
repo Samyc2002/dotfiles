@@ -18,10 +18,14 @@ alias py='python3'
 alias cls='clear'
 alias br='broot -dphsg'
 alias python='python3'
+alias vi='nvim'
+alias vim='nvim'
 
 export PATH="$PATH:/home/samy/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH" 
-
+export PATH=$PATH:/usr/local/go/bin
+# export TERM=alacritty
+export TERM="xterm-256color"                      # getting proper colors
    # Welcome text
    clear
 export dmenu_run="env LC_ALL=en_US.UTF-8 dmenu_run"

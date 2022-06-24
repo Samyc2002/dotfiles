@@ -1,0 +1,84 @@
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+set softtabstop=4
+set mouse=a
+
+" plugins
+" download and install vim-plug if not installed
+    if ! filereadable(system('echo -n "${XDG_CONFIG_HOME}/nvim/autoload/plug.vim"'))
+        silent !mkdir -p ${XDG_CONFIG_HOME}/nvim/autoload/
+        silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME}/nvim/autoload/plug.vim
+        autocmd VimEnter * PlugInstall
+    endif
+
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"  Plug 'scrooloose/nerdtree'
+"  Plug 'Xuyuanp/nerdtree-git-plugin'
+"  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"  Plug 'ryanoasis/vim-devicons'
+"  Plug 'airblade/vim-gitgutter'
+"  Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+"  Plug 'scrooloose/nerdcommenter'
+"  Plug 'christoomey/vim-tmux-navigator'
+"  Plug 'morhetz/gruvbox'
+"  Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+Plug 'tiagovla/tokyodark.nvim'
+Plug 'sheerun/vim-polyglot'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'junegunn/fzf.vim'
+Plug 'mattn/emmet-vim'
+Plug 'alvan/vim-closetag'
+Plug 'honza/vim-snippets'
+Plug 'vimwiki/vimwiki'
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'mhinz/vim-startify'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Initialize plugin system
+call plug#end()
+
+" Support 24-bit color
+execute "set t_8f=\e[38;2;%lu;%lu;%lum"
+execute "set t_8b=\e[48;2;%lu;%lu;%lum"
+if (has("termguicolors"))
+	set termguicolors
+endif
+
+" Aesthetics
+set background=dark
+set laststatus=2
+
+" fzf search
+nnoremap <C-p> :Files<CR>
+nnoremap <C-f> :BLines<CR>
+nnoremap <C-g> :GFiles<CR>
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filetypes = 'html,xhtml,phtml,jsx'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+let g:closetag_emptyTags_caseSensitive = 1
+
+let g:Hexokinase_highlighters = ['backgroundfull']
+let g:Hexokinase_ftEnabled = ['css', 'html', 'javascript']
+
+" emmet shortcuts
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+
+" coc settings
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ ]
