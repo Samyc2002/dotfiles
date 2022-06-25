@@ -196,6 +196,7 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
+alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
