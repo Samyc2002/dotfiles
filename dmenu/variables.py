@@ -14,9 +14,9 @@ def dmenuTall(command: string, lines: numbers, accent: string, prompt: string) -
         return (f"{command} -i -l {lines} -fn Poppins-10 -nb \#282c34 -nf \#bbc2cf -sb \{accent} -sf \#282c34 -W 1900.8 -h 30 -X 9.6 -Y 5.4 -p {prompt}")
     
 code = "code"
-vim = "vim"
+vim = "alacritty -e nvim"
 emacs = "emacsclient -c -a emacs"
 atom = "atom"
 
 browser = "brave"
-editor = code
+editor = vim
