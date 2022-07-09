@@ -126,7 +126,7 @@ up () {
 }
 
 # vim and emacs
-alias vim="nvim"
+alias vim="lvim"
 alias em="/usr/bin/emacs -nw"
 alias emacs="emacsclient -c -a 'emacs'"
 alias doomsync="~/.emacs.d/bin/doom sync"
@@ -201,6 +201,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gP='git pull'
+aiaas blf='sudo modprobe btusb && sudo systemctl start bluetooth &&  sudo systemctl enable bluetooth'
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"

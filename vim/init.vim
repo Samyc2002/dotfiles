@@ -50,6 +50,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jreybert/vimagit'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -363,3 +364,6 @@ let g:startify_custom_header = [
   \ '   ┗┛    ╹   ╹ ╹',
   \ '   ',
   \ ]
+
+" Github Copilot Configuration
+let g:copilot_enabled = 1

@@ -30,7 +30,7 @@
 
 [colors]
 ;background = #282c34
-background = #323845
+background = #00323845
 background-alt = #969696
 foreground = #bbc2cf
 foreground-alt = #D9E1EE
@@ -58,7 +58,7 @@ border-size = 0
 border-color = #00ffffff
 
 padding-left = 3
-padding-right = 40
+padding-right = 50
 
 module-margin-left = 0
 module-margin-right = 4
@@ -386,8 +386,8 @@ format-charging-underline = #c792ea
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-foreground = #c792ea
-format-discharging-prefix = "     "
-format-discharging-prefix-foreground = #c792ea
+; format-discharging-prefix = "     "
+; format-discharging-prefix-foreground = #c792ea
 format-discharging-underline = #c792ea
 
 format-full = <label-full>
@@ -407,9 +407,9 @@ animation-charging-2 = "    "
 animation-charging-foreground = #c792ea
 animation-charging-framerate = 750
 
-animation-discharging-0 = ""
-animation-discharging-1 = ""
-animation-discharging-2 = ""
+animation-discharging-0 = "     "
+animation-discharging-1 = "     "
+animation-discharging-2 = "     "
 animation-discharging-foreground = #c792ea
 animation-discharging-framerate = 750
 
