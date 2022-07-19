@@ -29,8 +29,9 @@
 ;==========================================================
 
 [colors]
-;background = #282c34
-background = #00323845
+; background = #282c34
+background = #00282c34
+module-background = #282c34
 background-alt = #969696
 foreground = #bbc2cf
 foreground-alt = #D9E1EE
@@ -58,18 +59,21 @@ border-size = 0
 border-color = #00ffffff
 
 padding-left = 3
-padding-right = 50
+padding-right = 40
 
 module-margin-left = 0
-module-margin-right = 4
+module-margin-right = 0
 
 font-0 = "Poppins:pixelsize=10;1"
-font-1 = "Font Awesome 6 Brands Regular:fontformat=truetype:size=10:antialias=false;0"
-font-2 = "Mononoki Nerd Font:pixelsize=10;1"
+font-1 = Font Awesome 5 Brands:size=10;4
+font-2 = Font Awesome 5 Free Solid:size=10;4
+font-3 = FiraCode Nerd Font Mono:style=Regular:size=15;4
+font-4 = FiraCode Nerd Font Mono:style=Regular:size=18;4
 
-modules-left = text powermenu text xworkspaces text xwindow
+modules-left = left xworkspaces right text text text text xwindow
+; modules-left = text powermenu text text text text left xworkspaces right text text text text xwindow
 ; modules-center = 
-modules-right = date pulseaudio xbacklight cpu memory uptime filesystem packages wlan battery
+modules-right = left date right text left pulseaudio right xbacklight text left cpu right text left memory right text left uptime right text left filesystem right text left packages right text left wlan right text left battery right
 
 tray-position = right
 tray-maxsize = 16
@@ -94,22 +98,39 @@ scroll-down = bspwm-desknext
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[module/left]
+type = custom/text
+
+content-background = ${colors.background}
+content-foreground = ${colors.module-background}
+content = %{T5}%{T-}
+
+[module/right]
+type = custom/text
+
+content-background = ${colors.background}
+content-foreground = ${colors.module-background}
+content = %{T5}%{T-}
+
 [module/xwindow]
 type = internal/xwindow
 
 format = <label>
-format-foreground = ${colors.background-alt}
-format-underline = ${colors.background-alt}
+; format-background = ${colors.module-background}
+; format-padding = 6
+format-foreground = ${colors.yellow}
+format-underline = ${colors.yellow}
 
 label-empty = Hey! Samy how yah doing ?
-label-empty-foreground = ${colors.background-alt}
+label-empty-foreground = ${colors.yellow}
 
-label = %title:0:70:...%
+label = %title:0:50:...%
 ; label = %title%
 
 [module/text]
 type = custom/text
 content =  " "
+content-padding = 0.5
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -135,11 +156,13 @@ mount-0 = /
 
 label-mounted =     %percentage_used%%
 label-mounted-foreground = ${colors.blue}
-label-mounted-underline = ${colors.blue}
+label-mounted-background = ${colors.module-background}
+; label-mounted-underline = ${colors.blue}
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.blue}
-label-unmounted-underline = ${colors.blue}
+label-unmounted-background = ${colors.module-background}
+; label-unmounted-underline = ${colors.blue}
 
 [module/bspwm]
 type = internal/bspwm
@@ -243,18 +266,22 @@ type = internal/cpu
 interval = 2
 format-prefix = "   "
 format-prefix-foreground = ${colors.yellow}
-format-underline = ${colors.yellow}
+format-prefix-background = ${colors.module-background}
+; format-underline = ${colors.yellow}
 label = %percentage:2%%
 label-foreground = ${colors.yellow}
+label-background = ${colors.module-background}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = "   "
 format-prefix-foreground = ${colors.red}
-format-underline = ${colors.red}
+format-prefix-background = ${colors.module-background}
+; format-underline = ${colors.red}
 label = %percentage_used%%
 label-foreground = ${colors.red}
+label-background = ${colors.module-background}
 
 [module/wlan]
 type = internal/network
@@ -263,14 +290,16 @@ interval = 3.0
 
 format-connected =      <label-connected>
 format-connected-foreground = ${colors.pink}
+format-connected-background = ${colors.module-background}
 label-connected = %essid%
-format-connected-underline = ${colors.pink}
+; format-connected-underline = ${colors.pink}
 
 ; format-disconnected =
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.pink}
+; format-disconnected-underline = ${colors.pink}
 label-disconnected =      disconnected
 label-disconnected-foreground = ${colors.pink}
+label-disconnected-background = ${colors.module-background}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -305,10 +334,12 @@ time = %l:%M %p
 
 format-prefix = "   "
 format-prefix-foreground = #46d9ff
-format-underline = #46d9ff
+format-prefix-background = ${colors.module-background}
+; format-underline = #46d9ff
 
 label = %date% - %time%
 label-foreground = #46d9ff
+label-background = ${colors.module-background}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -316,15 +347,19 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 format-volume-prefix = "    "
 format-volume-prefix-foreground = ${colors.green}
+format-volume-prefix-background = ${colors.module-background}
 label-volume = %percentage%%
 label-volume-foreground = ${colors.green}
-format-volume-underline = ${colors.green}
+label-volume-background = ${colors.module-background}
+; format-volume-underline = ${colors.green}
 
 format-muted-prefix = "    "
 format-muted-prefix-foreground = #FFB86C
+format-muted-prefix-background = ${colors.module-background}
 label-muted = muted
 label-muted-foreground = #FFB86C
-format-muted-underline = "#FFB86C"
+label-muted-background = ${colors.module-background}
+; format-muted-underline = "#FFB86C"
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -379,22 +414,27 @@ full-at = 98
 
 format-charging = <animation-charging> <label-charging>
 format-charging-foreground = #c792ea
+format-charging-background = ${colors.module-background}
 ; format-charging-prefix = "     "
 ; format-charging-prefix-foreground = #c792ea
 label-charging-foreground = #c792ea
-format-charging-underline = #c792ea
+label-charging-background = ${colors.module-background}
+; format-charging-underline = #c792ea
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-foreground = #c792ea
+format-discharging-background = ${colors.module-background}
 ; format-discharging-prefix = "     "
 ; format-discharging-prefix-foreground = #c792ea
-format-discharging-underline = #c792ea
+; format-discharging-underline = #c792ea
 
 format-full = <label-full>
 format-full-foreground = #c792ea
+format-full-background = ${colors.module-background}
 format-full-prefix = "     "
 format-full-prefix-foreground = #c792ea
-format-full-underline = #c792ea
+format-full-prefix-background = ${colors.module-background}
+; format-full-underline = #c792ea
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -493,18 +533,18 @@ icon-9 = 10;
 icon-default = 1
 format = <label-state>
 label-active = "%name%"
-label-active-foreground = ${colors.red}
-label-active-background = ${colors.background}
-label-active-underline = ${colors.red}
+label-active-foreground = ${colors.yellow}
+label-active-background = ${colors.module-background}
+; label-active-underline = ${colors.red}
 label-occupied = "%name%"
-lable-occupied-background = ${colors.background}
+label-occupied-background = ${colors.module-background}
 label-occupied-foreground = ${colors.red}
 label-occupied-underline = ${colors.wsbackground}
 label-urgent = "%name%"
 label-urgent-foreground = ${colors.urgent}
 label-urgent-underline = ${colors.urgent}
 label-empty = "%name%"
-label-empty-background = ${colors.background}
+label-empty-background = ${colors.module-background}
 label-empty-foreground = ${colors.pink}
 label-empty-underline = ${colors.wsbackground}
 
@@ -516,9 +556,10 @@ exec = ~/.config/polybar/scripts/uptime.sh
 
 format =     <label>
 format-foreground = ${colors.foreground-alt}
+format-background = ${colors.module-background}
 ; format-background = ${colors.shade16}
 ; format-overline = ${colors.background}
-format-underline = ${colors.foreground-alt}
+; format-underline = ${colors.foreground-alt}
 
 label = %output%
 
@@ -530,7 +571,8 @@ tail = true
 
 format =     <label>
 format-foreground = ${colors.green}
-format-underline = ${colors.green}
+format-background = ${colors.module-background}
+; format-underline = ${colors.green}
 label = %output% update(s) left
 
 click-left = alacritty -e yay -Syu

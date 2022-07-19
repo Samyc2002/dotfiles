@@ -6,16 +6,7 @@ filled in as strings with either
 a global executable or a path to
 an executable
 ]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
--- general
-lvim.log.level = "warn"
-lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
-lvim.transparent_window = false
-vim.opt.relativenumber = true
--- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
+-- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT general lvim.log.level = "warn" lvim.format_on_save = true lvim.colorscheme = "onedarker" lvim.transparent_window = false vim.opt.relativenumber = true to disable icons and use a minimalist setup, uncomment the following lvim.use_icons = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -26,7 +17,7 @@ normal_keys["<C-s>"] = ":w<cr>"
 normal_keys["<C-b>"] = ":NvimTreeToggle<CR>"
 normal_keys["<C-p>"] = ":Telescope find_files<CR>"
 normal_keys["<C-]>"] = ":bnext<CR>"
-normal_keys["<C-[>"] = ":bprevious<CR>"
+normal_keys["<C-}>"] = ":bprevious<CR>"
 normal_keys["<C-t>"] = ":ToggleTerm<CR>"
 normal_keys["<C-e>"] = ":TroubleToggle<CR>"
 -- unmap a default keymapping
@@ -75,18 +66,18 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-    "bash",
-    "c",
-    "javascript",
-    "json",
-    "lua",
-    "python",
-    "typescript",
-    "tsx",
-    "css",
-    "rust",
-    "java",
-    "yaml",
+  "bash",
+  "c",
+  "javascript",
+  "json",
+  "lua",
+  "python",
+  "typescript",
+  "tsx",
+  "css",
+  "rust",
+  "java",
+  "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -122,52 +113,57 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-    { command = "black", filetypes = { "python" } },
-    { command = "isort", filetypes = { "python" } },
-    {
-        -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-        command = "prettier",
-        ---@usage arguments to pass to the formatter
-        -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-        extra_args = { "--print-with", "100", "--tab-width", "2", "--use-tabs", "false", "--semi", "true",
-            "--single-quote",
-            "false", "--trailing-comma", "none", "--end-of-line", "auto" },
-        ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-    },
+  { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
+  {
+    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "prettier",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    extra_args = { "--print-with", "100", "--tab-width", "2", "--use-tabs", "false", "--semi", "true",
+      "--single-quote",
+      "false", "--trailing-comma", "none", "--end-of-line", "auto" },
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "json" },
+  },
 }
 
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-    --   { command = "flake8", filetypes = { "python" } },
-    --   {
-    --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    --     command = "shellcheck",
-    --     ---@usage arguments to pass to the formatter
-    --     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    --     extra_args = { "--severity", "warning" },
-    --   },
-    --   {
-    --     command = "codespell",
-    --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    --     filetypes = { "javascript", "python" },
-    --   },
+  --   { command = "flake8", filetypes = { "python" } },
+  --   {
+  --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+  --     command = "shellcheck",
+  --     ---@usage arguments to pass to the formatter
+  --     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+  --     extra_args = { "--severity", "warning" },
+  --   },
+  --   {
+  --     command = "codespell",
+  --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+  --     filetypes = { "javascript", "python" },
+  --   },
 }
 
 -- Additional Plugins
 lvim.plugins = {
-    { "folke/tokyonight.nvim" },
-    {
-        "folke/trouble.nvim",
-        cmd = "TroubleToggle",
-    },
-    { "github/copilot.vim" },
-    { "joshdick/onedark.vim" },
+  { "folke/tokyonight.nvim" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  { "github/copilot.vim" },
+  { "joshdick/onedark.vim" },
+  {
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  },
 }
 
 local snippets = require "luasnip.loaders.from_vscode"
-snippets.lazy_load({ paths = { "./snippets" }, include = { "cpp", "javascriptreact", "typescriptreact" } })
+snippets.lazy_load({ paths = { "./snippets" },
+  include = { "cpp", "javascriptreact", "typescriptreact", "javascript", "typescript" } })
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
@@ -185,33 +181,33 @@ snippets.lazy_load({ paths = { "./snippets" }, include = { "cpp", "javascriptrea
 -- lvim.autocommands.custom_groups = {
 --   { "FileType", "c,cpp", "setlocal ts=4 sw=4" },
 -- }
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "*.c, *.cpp",
-    command = "setlocal ts=4 sw=4"
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.c", "*.cpp" },
+  command = "setlocal ts=4 sw=4"
 })
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "clangd" })
 
 local clangd_flags = {
-    "--fallback-style=google",
-    "--background-index",
-    "-j=12",
-    "--all-scopes-completion",
-    "--pch-storage=disk",
-    "--clang-tidy",
-    "--log=error",
-    "--completion-style=detailed",
-    "--header-insertion=iwyu",
-    "--header-insertion-decorators",
-    "--enable-config",
-    "--offset-encoding=utf-16",
-    "--ranking-model=heuristics",
-    "--folding-ranges",
+  "--fallback-style=google",
+  "--background-index",
+  "-j=12",
+  "--all-scopes-completion",
+  "--pch-storage=disk",
+  "--clang-tidy",
+  "--log=error",
+  "--completion-style=detailed",
+  "--header-insertion=iwyu",
+  "--header-insertion-decorators",
+  "--enable-config",
+  "--offset-encoding=utf-16",
+  "--ranking-model=heuristics",
+  "--folding-ranges",
 }
 
 local clangd_bin = "clangd"
 
 local opts = {
-    cmd = { clangd_bin, unpack(clangd_flags) },
+  cmd = { clangd_bin, unpack(clangd_flags) },
 }
 require("lvim.lsp.manager").setup("clangd", opts)
