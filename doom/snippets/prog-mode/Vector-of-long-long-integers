@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Vector of long long integers
+# key: vi
+# --
+
+vector<ll> $1;

@@ -1,0 +1,48 @@
+# -*- mode: snippet -*-
+# name: Template for Grapg code
+# key: graph
+# --
+
+vector<vector<pii>> graph;
+
+void addEdge(int u, int v, bool bidir = true, int wt = 0) {
+    graph[u].push_back(make_pair(v, wt));
+    if(bidir) {
+        graph[v].push_back(make_pair(u, wt));
+    }
+}
+
+void display() {
+    for(auto i : graph) {
+        // i->vector of pair
+        if(i.size() == 0) {
+            cout<<"empty";
+        }
+        for(auto j : i) {
+            // j is a pair
+            cout<<"{"<<j.first<<","<<j.second<<"} ";
+        }
+        cout<<"\n";
+    }
+}
+
+void bfs(int src, int vertices) {
+    queue<int> qu;
+    vector<bool> visited(vertices, false);
+
+    qu.push(src);
+    visited[src] = true;
+
+    while(not qu.empty()) {
+        int currentNode = qu.front();
+        qu.pop();
+        cout<<currentNode<<" ";
+        for(auto neighbour : graph[currentNode]) {
+            // neighbour is a pair
+            if(not visited[neighbour.first]) {
+                qu.push(neighbour.first);
+                visited[neighbour.first] = true;
+            }
+        }
+    }
+}

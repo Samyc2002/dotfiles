@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Set of long long integers
+# key: osi
+# --
+
+set<ll> $1;

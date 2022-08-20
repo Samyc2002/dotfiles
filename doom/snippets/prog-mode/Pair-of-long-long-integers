@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Pair of long long integers
+# key: pii
+# --
+
+pair<ll, ll> $1;

@@ -185,7 +185,7 @@ super + alt + e
 	  pcmanfm
 
 # Emacs
-super + alt + i
+super + e
 	  emacsclient -c -a "emacs"
 
 # Atom IDE

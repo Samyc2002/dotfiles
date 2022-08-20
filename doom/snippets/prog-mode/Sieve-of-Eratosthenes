@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: Sieve of Eratosthenes
+# key: sieve
+# --
+
+const ll MAX = $1;
+
+vector<bool> prime(MAX, true);
+
+void sieve() {
+    for (int p = 2; p * p <= MAX; p++) {
+        if (prime[p] == true) {
+            for (int i = p * p; i <= MAX; i += p) {
+                prime[i] = false;
+            }
+        }
+    }
+}

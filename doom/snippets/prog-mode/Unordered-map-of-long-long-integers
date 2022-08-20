@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Unordered map of long long integers
+# key: mii
+# --
+
+unordered_map<ll, ll> $1;

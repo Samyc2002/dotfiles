@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: Snippet for Leetcode Questions
+# key: cpp_l
+# --
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    $1
+};
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    Solution s;
+    return 0;
+}

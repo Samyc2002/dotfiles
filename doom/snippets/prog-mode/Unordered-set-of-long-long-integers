@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Unordered set of long long integers
+# key: si
+# --
+
+unordered_set<ll> $1;

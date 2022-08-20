@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Mod
+# key: mod
+# --
+
+const ll MOD = 1000000007

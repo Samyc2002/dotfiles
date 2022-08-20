@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Vector of strings
+# key: vs
+# --
+
+vector<string> $1;

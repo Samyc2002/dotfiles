@@ -26,6 +26,8 @@ alias gc='git commit'
 alias gp='git push'
 alias gP='git pull'
 alias blf='sudo modprobe btusb && sudo systemctl start bluetooth &&  sudo systemctl enable bluetooth'
+# alias emacsclient="emacsclient -c -a 'emacs'"
+alias emacsclient="emacsclient -c"
 
 export PATH="$PATH:/home/samy/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH" 
@@ -38,3 +40,4 @@ export dmenu_run="env LC_ALL=en_US.UTF-8 dmenu_run"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#neofetch

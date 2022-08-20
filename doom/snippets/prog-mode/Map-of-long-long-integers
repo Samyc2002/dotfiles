@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Map of long long integers
+# key: omii
+# --
+
+map<ll, ll> $1;

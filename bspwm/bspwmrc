@@ -8,8 +8,8 @@ xsetroot -cursor_name left_ptr &
 /home/samy/.config/polybar/launch.sh &
 nitrogen --restore &
 picom --experimental-backend --config ~/.config/picom/picom.sample.conf & 
-mpv --no-video ~/.config/Startup_Sounds/ubuntu_startup_sound.mp3 &
-emacs --daemon &
+# mpv --no-video ~/.config/Startup_Sounds/ubuntu_startup_sound.mp3 &
+usr/bin/emacs --daemon &
 xscreensaver -nosplash &
 volumeicon &
 nm-applet &
@@ -50,6 +50,7 @@ bspc rule -a Brave-browser desktop='^2' follow=on
 bspc rule -a Spotify desktop='^8' follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a Discord desktop='^7'
+bspc rule -a Zathura state=tiled
 
 #################################################
 #                  WM LAYOUTS                   #
@@ -60,6 +61,6 @@ bsp-layout set tall "       " -- --master-size 0.5
 bsp-layout set wide "       " -- --master-size 0.5
 bsp-layout set wide "       " -- --master-size 0.5
 bsp-layout set monocle "       " -- --master-size 0.5
-bsp-layout set monocle "       " -- --master-size 0.5
+bsp-layout set monocle "       " -- --master-size 0.5
 bsp-layout set monocle "       " -- --master-size 0.5
 bsp-layout set monocle "       " -- --master-size 0.5

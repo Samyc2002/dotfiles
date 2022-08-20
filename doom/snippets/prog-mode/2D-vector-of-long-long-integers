@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: 2D vector of long long integers
+# key: vii
+# --
+
+vector<vector<ll>> $1;

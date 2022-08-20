@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Increasing for loop
+# key: foi
+# --
+
+for(ll i=0; i<n; i++) {
+    $1
+}

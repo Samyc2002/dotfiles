@@ -202,6 +202,8 @@ alias gc='git commit'
 alias gp='git push'
 alias gP='git pull'
 aiaas blf='sudo modprobe btusb && sudo systemctl start bluetooth &&  sudo systemctl enable bluetooth'
+# alias emacsclient="emacsclient -c -a 'emacs'"
+alias emacsclient="emacsclient -c"
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
