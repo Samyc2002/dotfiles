@@ -57,3 +57,5 @@
 (package! smudge)
 (package! org-bullets)
 (package! beacon)
+(package! clippy)
+(package! exwm)

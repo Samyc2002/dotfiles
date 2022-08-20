@@ -14,8 +14,8 @@
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 (custom-set-faces!
-  'font-lock-comment-face :slant italic
-  'font-lock-keyword-face :slant italic)
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
 (add-hook! 'org-mode-hook #'mixed-pitch-mode)
 (add-hook! 'org-mode-hook #'solaire-mode)
 (setq mixed-pitch-variable-pitch-cursor nil)
@@ -38,10 +38,6 @@
 (let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not)))
   (dolist (sym ligatures-to-disable)
     (plist-put! +ligatures-extra-symbols sym nil)))
-
-(setq
-    org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿")
-)
 
 ;; Tab Support (they look kinda cool xD)
 (after! centaur-tabs (centaur-tabs-group-by-projectile-project))
@@ -93,7 +89,7 @@ _h_ decrease width    _l_ increase width
 (evil-commentary-mode)
 
 ;; Turns org documents into masterpieces which in turn turns me on.
-(org-bullets-mode)
+(org-bullets-mode 1)
 
 ;; Blinks the cursor and looks cool
 (beacon-mode 1)
@@ -107,3 +103,68 @@ _h_ decrease width    _l_ increase width
       "b t" #'+treemacs/toggle)         ; File tree bind
 (map! "C-/" #'evil-commentary)         ; File tree bind
 (map! "C-a" #'affe-find)         ; File tree bind
+
+;; Clippy configuration
+(map! :leader
+      (:prefix ("c h" . "Help info from Clippy")
+       :desc "Clippy describes function under point" "f" #'clippy-describe-function
+       :desc "Clippy describes variable under point" "v" #'clippy-describe-variable))
+
+;; Org mode settings
+(map! :leader
+      :desc "Org babel tangle" "m B" #'org-babel-tangle)
+(after! org
+  (setq org-directory "~/nc/Org/"
+        org-agenda-files '("~/nc/Org/agenda.org")
+        org-default-notes-file (expand-file-name "notes.org" org-directory)
+        org-ellipsis " ▼ "
+        org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
+        org-superstar-itembullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
+        org-log-done 'time
+        org-hide-emphasis-markers t
+        ;; ex. of org-link-abbrev-alist in action
+        ;; [[arch-wiki:Name_of_Page][Description]]
+        org-link-abbrev-alist    ; This overwrites the default Doom org-link-abbrev-list
+          '(("google" . "http://www.google.com/search?q=")
+            ("arch-wiki" . "https://wiki.archlinux.org/index.php/")
+            ("ddg" . "https://duckduckgo.com/?q=")
+            ("wiki" . "https://en.wikipedia.org/wiki/"))
+        org-table-convert-region-max-lines 20000
+        org-todo-keywords        ; This overwrites the default Doom org-todo-keywords
+          '((sequence
+             "TODO(t)"           ; A task that is ready to be tackled
+             "BLOG(b)"           ; Blog writing assignments
+             "GYM(g)"            ; Things to accomplish at the gym
+             "PROJ(p)"           ; A project that contains other tasks
+             "VIDEO(v)"          ; Video assignments
+             "WAIT(w)"           ; Something is holding up this task
+             "|"                 ; The pipe necessary to separate "active" states and "inactive" states
+             "DONE(d)"           ; Task has been completed
+             "CANCELLED(c)" )))) ; Task has been cancelled
+
+;; Org headings
+(defun org-colors-doom-one ()
+  "Enable Doom One colors for Org headers."
+  (interactive)
+  (dolist
+      (face
+       '((org-level-1 1.7 "#51afef" ultra-bold)
+         (org-level-2 1.6 "#c678dd" extra-bold)
+         (org-level-3 1.5 "#98be65" bold)
+         (org-level-4 1.4 "#da8548" semi-bold)
+         (org-level-5 1.3 "#5699af" normal)
+         (org-level-6 1.2 "#a9a1e1" normal)
+         (org-level-7 1.1 "#46d9ff" normal)
+         (org-level-8 1.0 "#ff6c6b" normal)))
+    (set-face-attribute (nth 0 face) nil :font doom-variable-pitch-font :weight (nth 3 face) :height (nth 1 face) :foreground (nth 2 face)))
+    (set-face-attribute 'org-table nil :font doom-font :weight 'normal :height 1.0 :foreground "#bfafdf"))
+(org-colors-doom-one)
+
+;; EWW Configuration
+(setq browse-url-browser-function 'eww-browse-url)
+(map! :leader
+      :desc "Search web for text between BEG/END"
+      "s w" #'eww-search-words
+      (:prefix ("e" . "evaluate/ERC/EWW")
+       :desc "Eww web browser" "w" #'eww
+       :desc "Eww reload page" "R" #'eww-reload))
