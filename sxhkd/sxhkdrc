@@ -4,7 +4,8 @@
 
 # program launcher
 super + r
-  python3 /home/samy/.config/dmenu/run.py
+  ~/.config/rofi/launchers/type-2/launcher.sh
+  # python3 /home/samy/.config/dmenu/run.py
 
 # config editor
 super + c
@@ -28,7 +29,8 @@ super + w
 
 #run exit script
 super + shift + q
-	python3 /home/samy/.config/dmenu/exit.py
+  ~/.config/rofi/powermenu/type-2/powermenu.sh
+	# python3 /home/samy/.config/dmenu/exit.py
 
 # Password Manager
 super + p
@@ -185,8 +187,10 @@ super + alt + e
 	  pcmanfm
 
 # Emacs
-super + e
+super + a
 	  emacsclient -c -a "emacs"
+super + e
+		xdotool key super+a; sleep 1; xdotool key super+t
 
 # Atom IDE
 super + alt + a
@@ -211,12 +215,12 @@ super + shift + Return
 	alacritty -e htop
 
 # Media controls
-XF86AudioPlay
-	mocp --toggle-pause
-XF86AudioPrev
-	mocp --previous
-XF86AudioNext
-	mocp --next
+# XF86AudioPlay
+# 	mocp --toggle-pause
+# XF86AudioPrev
+# 	mocp --previous
+# XF86AudioNext
+# 	mocp --next
 XF86AudioMute
 	amixer -D pulse sset Master toggle
 XF86AudioLowerVolume

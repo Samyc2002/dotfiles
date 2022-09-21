@@ -19,7 +19,7 @@ def dmenuTall(
 
 code = "code"
 vim = "alacritty -e lvim"
-emacs = "emacsclient -c -a emacs"
+emacs = "xdotool key super+a; sleep 1; xdotool key super+t"
 atom = "atom"
 
 browser = "brave"

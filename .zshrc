@@ -31,9 +31,21 @@ alias emacsclient="emacsclient -c"
 
 export PATH="$PATH:/home/samy/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH" 
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/usr/local/go/bin"
 # export TERM=alacritty
 export TERM="xterm-256color"                      # getting proper colors
+export PATH="$PATH:$HOME/.config/rofi/scripts"
+
+# These are for my develoment needs
+export JAVA_HOME=$HOME/jdk-18.0.2.1
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+
    # Welcome text
    clear
 export dmenu_run="env LC_ALL=en_US.UTF-8 dmenu_run"

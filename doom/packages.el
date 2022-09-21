@@ -59,3 +59,6 @@
 (package! beacon)
 (package! clippy)
 (package! exwm)
+(package! dracula-theme)
+(package! atom-one-dark-theme)
+(package! colormaps)

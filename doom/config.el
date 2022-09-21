@@ -3,22 +3,23 @@
       user-mail-address "200020040@iitdh.ac.in")
 
 ;; General Settings
-(setq doom-theme 'doom-one)
+(setq doom-theme 'atom-one-dark)
 (setq display-line-numbers-type 'relative)
 (setq org-directory "~/org/")
 (setq fancy-splash-image "~/Downloads/StartupImage.png")
 (setq +doom-dashboard-menu-sections (cl-subseq +doom-dashboard-menu-sections 0 4))
-(setq doom-font (font-spec :family "Fira Code Medium" :size 14)
-      doom-variable-pitch-font (font-spec :family "Alegreya" :size 16))
+(setq doom-font (font-spec :family "Fira Code Medium" :size 15)
+      doom-variable-pitch-font (font-spec :family "Fira Code" :size 17 :weight 'bold))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
-(custom-set-faces!
-  '(font-lock-comment-face :slant italic)
-  '(font-lock-keyword-face :slant italic))
+(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
+(set-face-attribute 'font-lock-keyword-face nil :slant 'italic)
 (add-hook! 'org-mode-hook #'mixed-pitch-mode)
 (add-hook! 'org-mode-hook #'solaire-mode)
 (setq mixed-pitch-variable-pitch-cursor nil)
+
+;; (setq initial-frame-alist '((top . 1) (left . 1) (width . 212) (height . 60)))
 
 ;; Ligature fixes (dunno what this does, but the ligature looks better with these)
 (plist-put! +ligatures-extra-symbols
@@ -34,7 +35,6 @@
   :bool          nil
   :list          nil
 )
-
 (let ((ligatures-to-disable '(:true :false :int :float :str :bool :list :and :or :for :not)))
   (dolist (sym ligatures-to-disable)
     (plist-put! +ligatures-extra-symbols sym nil)))
@@ -51,7 +51,6 @@
          centaur-tabs-gray-out-icons 'buffer)
    (centaur-tabs-headline-match)
    (centaur-tabs-mode t))
-
 (defhydra doom-window-resize-hydra (:hint nil)
   "
              _k_ increase height
@@ -168,3 +167,7 @@ _h_ decrease width    _l_ increase width
       (:prefix ("e" . "evaluate/ERC/EWW")
        :desc "Eww web browser" "w" #'eww
        :desc "Eww reload page" "R" #'eww-reload))
+
+;; Modeline Configuration
+;; (after! doom-modeline
+;;   (setq doom-modeline-time t))

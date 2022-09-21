@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Assembly Languale
+# key: asm
+# --
+
+#ORG 7000H
+$1
+# ORG 7500H
+# DB 00H
