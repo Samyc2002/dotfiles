@@ -9,7 +9,7 @@ xsetroot -cursor_name left_ptr &
 nitrogen --restore &
 picom --experimental-backend --config ~/.config/picom/picom.sample.conf &
 # mpv --no-video ~/.config/Startup_Sounds/ubuntu_startup_sound.mp3 &
-usr/bin/emacs --daemon
+usr/bin/emacs --daemon &
 xscreensaver -nosplash &
 volumeicon &
 nm-applet &

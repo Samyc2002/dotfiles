@@ -36,14 +36,6 @@ super + shift + q
 super + p
 	python3 /home/samy/.config/dmenu/password.py
 
-# Volume Manager
-super + shift + v
-    ~/.config/rofi/applets/bin/volume.sh
-
-# Power Manager
-super + shift + b
-    ~/.config/rofi/applets/bin/battery.sh
-
 ##########################
 # WM INDEPENDENT HOTKEYS #
 ##########################
@@ -166,6 +158,22 @@ super + {Left,Down,Up,Right}
 # CUSTOM KEYBNDS #
 ##################
 
+# Firefox
+super + alt + f
+	  firefox
+
+#brave
+super + alt + b
+	  brave
+
+#vivaldi
+super + alt + v
+	  vivaldi
+
+# mailspring
+super + alt + m
+	  mailspring
+
 # Lock Screen
 super + q
 	  xscreensaver-command -lock
@@ -184,9 +192,13 @@ super + a
 super + e
 		xdotool key super+a; sleep 1; xdotool key super+t
 
-# Discord
-super + d
-      ~/Discord/Discord
+# Atom IDE
+super + alt + a
+	  atom
+
+# VS Code
+super + alt + c
+		code
 
 # Brightness
 XF86MonBrightnessUp
