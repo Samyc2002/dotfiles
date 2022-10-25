@@ -1,8 +1,9 @@
-lastupdatecheck: 1656093858
+lastupdatecheck: 1666706125
 recentrepos:
 - /home/samy/configs
 - /home/samy/Projects/react-n-ftend
 startuppopupversion: 5
 customcommandshistory:
 - git checkout bugfix/June08
+- q
 hidecommandlog: false

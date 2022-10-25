@@ -35,6 +35,7 @@ export PATH="$PATH:/usr/local/go/bin"
 # export TERM=alacritty
 export TERM="xterm-256color"                      # getting proper colors
 export PATH="$PATH:$HOME/.config/rofi/scripts"
+export CONFIG_DIR="$HOME/.config/lazygit"
 
 # These are for my develoment needs
 export JAVA_HOME=$HOME/jdk-18.0.2.1
