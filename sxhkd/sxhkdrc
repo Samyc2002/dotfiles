@@ -50,7 +50,7 @@ super + shift + b
 
 # terminal emulator
 super + Return
-	alacritty
+	alacritty -e tmux attach
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -168,7 +168,8 @@ super + {Left,Down,Up,Right}
 
 # Lock Screen
 super + q
-	  xscreensaver-command -lock
+	  betterlockscreen -l dim
+#	  xscreensaver-command -lock
 
 # Screenshot
 super + shift + p
@@ -200,7 +201,7 @@ super + shift + p
 
 # htop
 super + shift + Return
-	alacritty -e htop
+	alacritty
 
 # Media controls
 # XF86AudioPlay

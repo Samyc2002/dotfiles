@@ -96,12 +96,12 @@ case ${chosen} in
 		run_cmd --reboot
 		;;
 	$lock)
-		xscreensaver-command -lock
-		# if [[ -x '/usr/bin/betterlockscreen' ]]; then
-		# 	betterlockscreen -l
-		# elif [[ -x '/usr/bin/i3lock' ]]; then
-		# 	i3lock
-		# fi
+		# xscreensaver-command -lock
+		if [[ -x '/usr/bin/betterlockscreen' ]]; then
+			betterlockscreen -l dim
+		elif [[ -x '/usr/bin/i3lock' ]]; then
+			i3lock
+		fi
 		;;
 	$suspend)
 		run_cmd --suspend
