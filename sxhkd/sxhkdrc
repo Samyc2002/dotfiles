@@ -33,7 +33,7 @@ super + shift + q
 	# python3 /home/samy/.config/dmenu/exit.py
 
 # Password Manager
-super + p
+super + shift + p
 	python3 /home/samy/.config/dmenu/password.py
 
 # Volume Manager
