@@ -8,7 +8,9 @@ killall -q polybar
 # Launch Polybar, using default config location ~/.config/polybar/config
 # polybar window 2>&1 | tee -a /tmp/polybar.log & disown
 # polybar widgets 2>&1 | tee -a /tmp/polybar.log & disown
-polybar topbar 2>&1 | tee -a /tmp/polybar.log & disown
+polybar topbarLeft 2>&1 | tee -a /tmp/polybar.log & disown
+polybar topbarCenter 2>&1 | tee -a /tmp/polybar.log & disown
+polybar topbarRight 2>&1 | tee -a /tmp/polybar.log & disown
 # polybar workspaces 2>&1 | tee -a /tmp/polybar.log & disown
 # polybar sysinfo 2>&1 | tee -a /tmp/polybar.log &
 # polybar tray 2>&1 | tee -a /tmp/polybar.log &

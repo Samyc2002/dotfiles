@@ -29,8 +29,8 @@
 ;==========================================================
 
 [colors]
-; background = #282c34
-background = #00282c34
+background = #282c34
+transparent = #00FFFFFF
 module-background = #282c34
 background-alt = #969696
 foreground = #bbc2cf
@@ -41,16 +41,16 @@ red = #ff6c6b
 yellow = #ecbe7b
 blue = #51afbb
 
-[bar/topbar]
-width = 99.5%
+[bar/topbarLeft]
+width = 23%
 height = 30
 offset-x = 0.25%
 offset-y = 0.5%
 radius = 10.0
 fixed-center = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.transparent}
+foreground = ${colors.pink}
 
 line-size = 3
 line-color = #ff5555
@@ -59,7 +59,7 @@ border-size = 0
 border-color = #00ffffff
 
 padding-left = 3
-padding-right = 40
+padding-right = 3
 
 module-margin-left = 0
 module-margin-right = 0
@@ -70,18 +70,132 @@ font-2 = Font Awesome 5 Free Solid:size=10;4
 font-3 = FiraCode Nerd Font Mono:style=Regular:size=15;4
 font-4 = FiraCode Nerd Font Mono:style=Regular:size=18;4
 
-modules-left = left xworkspaces right text text text text xwindow
+modules-left = sep xwindow
 ; modules-left = text powermenu text text text text left xworkspaces right text text text text xwindow
-; modules-center = 
-modules-right = left date right text left pulseaudio right xbacklight text left cpu right text left memory right text left filesystem right text left packages right text left wlan right text left battery right
+; modules-center = xworkspaces
+; modules-right = date text pulseaudio text xbacklight text cpu text memory text filesystem text wlan text battery 
 
-tray-position = right
+tray-position = left 
 tray-maxsize = 16
 tray-scale = 1.0
 tray-padding = 0
 tray-offset-y = 0
-tray-offset-x = -10.0
-tray-detached = true
+tray-offset-x = 10.0
+tray-detached = false 
+tray-background = ${colors.background}
+
+wm-restack = bspwm
+;wm-restack = i3
+
+override-redirect = true
+
+scroll-up = bspwm-deskprev
+scroll-down = bspwm-desknext
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/topbarCenter]
+width = 16%
+height = 30
+offset-x = 40.25%
+offset-y = 0.5%
+radius = 10.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.pink}
+
+line-size = 3
+line-color = #ff5555
+
+border-size = 0
+border-color = #00ffffff
+
+padding-left = 5
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Poppins:pixelsize=10;1"
+font-1 = Font Awesome 5 Brands:size=10;4
+font-2 = Font Awesome 5 Free Solid:size=10;4
+font-3 = FiraCode Nerd Font Mono:style=Regular:size=15;4
+font-4 = FiraCode Nerd Font Mono:style=Regular:size=18;4
+
+; modules-left = xwindow 
+; modules-left = text powermenu text text text text left xworkspaces right text text text text xwindow
+modules-center = xworkspaces
+; modules-right = date text pulseaudio text xbacklight text cpu text memory text filesystem text wlan text battery 
+
+tray-position = none
+tray-maxsize = 16
+tray-scale = 1.0
+tray-padding = 0
+tray-offset-y = 0
+tray-offset-x = 10.0
+tray-detached = false 
+tray-background = ${colors.background}
+
+wm-restack = bspwm
+;wm-restack = i3
+
+override-redirect = true
+
+scroll-up = bspwm-deskprev
+scroll-down = bspwm-desknext
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/topbarRight]
+width = 27.5%
+height = 30
+offset-x = 72%
+offset-y = 0.5%
+radius = 10.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.pink}
+
+line-size = 3
+line-color = #ff5555
+
+border-size = 0
+border-color = #00ffffff
+
+padding-left = 5
+padding-right = 5
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Poppins:pixelsize=10;1"
+font-1 = Font Awesome 5 Brands:size=10;4
+font-2 = Font Awesome 5 Free Solid:size=10;4
+font-3 = FiraCode Nerd Font Mono:style=Regular:size=15;4
+font-4 = FiraCode Nerd Font Mono:style=Regular:size=18;4
+
+; modules-left = xwindow 
+; modules-left = text powermenu text text text text left xworkspaces right text text text text xwindow
+; modules-center = xworkspaces
+modules-right = date text pulseaudio text memory text cpu text filesystem text wlan text battery 
+
+tray-position = none
+tray-maxsize = 16
+tray-scale = 1.0
+tray-padding = 0
+tray-offset-y = 0
+tray-offset-x = 10.0
+tray-detached = false 
 tray-background = ${colors.background}
 
 wm-restack = bspwm
@@ -112,41 +226,49 @@ content-background = ${colors.background}
 content-foreground = ${colors.module-background}
 content = %{T5}%{T-}
 
+[module/text]
+type = custom/text
+content =  "    "
+content-padding = 0.5
+content-foreground = ${colors.pink}
+
+[module/sep]
+type = custom/text
+content =  "   "
+content-padding = 0.5
+content-foreground = ${colors.pink}
+
 [module/xwindow]
 type = internal/xwindow
 
 format = <label>
 ; format-background = ${colors.module-background}
 ; format-padding = 6
-format-foreground = ${colors.yellow}
-format-underline = ${colors.yellow}
+format-foreground = ${colors.pink}
+; format-underline = ${colors.pink}
 
 label-empty = Hey! Samy how yah doing ?
-label-empty-foreground = ${colors.yellow}
+label-empty-foreground = ${colors.pink}
 
-label = %title:0:50:...%
+label = "  "
+; label = %title:0:50:...%
 ; label = %title%
-
-[module/text]
-type = custom/text
-content =  " "
-content-padding = 0.5
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.green}
+format-prefix-foreground = ${colors.pink-alt}
+format-prefix-underline = ${colors.pink}
 
 label-layout = %layout%
-label-layout-underline = ${colors.green}
+label-layout-underline = ${colors.pink}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.green}
-label-indicator-underline = ${colors.green}
+label-indicator-background = ${colors.pink}
+label-indicator-underline = ${colors.pink}
 
 [module/filesystem]
 type = internal/fs
@@ -154,14 +276,14 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =     %percentage_used%%
-label-mounted-foreground = ${colors.blue}
-label-mounted-background = ${colors.module-background}
+label-mounted =   %percentage_used%%
+label-mounted-foreground = ${colors.foreground-alt}
+; label-mounted-background = ${colors.module-background}
 ; label-mounted-underline = ${colors.blue}
 
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.blue}
-label-unmounted-background = ${colors.module-background}
+label-unmounted-foreground = ${colors.foreground-alt}
+; label-unmounted-background = ${colors.module-background}
 ; label-unmounted-underline = ${colors.blue}
 
 [module/bspwm]
@@ -176,11 +298,11 @@ label-occupied = %name%
 label-occupied-padding = 2
 
 label-urgent = %name%!
-label-urgent-background = ${colors.red}
+label-urgent-background = ${colors.pink}
 label-urgent-padding = 2
 
 label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${colors.pink-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
@@ -217,7 +339,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.red}
+label-urgent-background = ${colors.pink}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -254,7 +376,7 @@ bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+bar-empty-foreground = ${colors.pink-alt}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -264,49 +386,49 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "   "
-format-prefix-foreground = ${colors.yellow}
-format-prefix-background = ${colors.module-background}
-; format-underline = ${colors.yellow}
+format-prefix = "  "
+format-prefix-foreground = ${colors.background-alt}
+; format-prefix-background = ${colors.module-background}
+; format-underline = ${colors.pink}
 label = %percentage:2%%
-label-foreground = ${colors.yellow}
-label-background = ${colors.module-background}
+label-foreground = ${colors.background-alt}
+; label-background = ${colors.module-background}
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "   "
-format-prefix-foreground = ${colors.red}
-format-prefix-background = ${colors.module-background}
-; format-underline = ${colors.red}
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+; format-prefix-background = ${colors.module-background}
+; format-underline = ${colors.pink}
 label = %percentage_used%%
-label-foreground = ${colors.red}
-label-background = ${colors.module-background}
+label-foreground = ${colors.foreground-alt}
+; label-background = ${colors.module-background}
 
 [module/wlan]
 type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected =      <label-connected>
-format-connected-foreground = ${colors.pink}
-format-connected-background = ${colors.module-background}
+format-connected =   <label-connected>
+format-connected-foreground = ${colors.background-alt}
+; format-connected-background = ${colors.module-background}
 label-connected = %essid%
 ; format-connected-underline = ${colors.pink}
 
 ; format-disconnected =
 format-disconnected = <label-disconnected>
 ; format-disconnected-underline = ${colors.pink}
-label-disconnected =      disconnected
-label-disconnected-foreground = ${colors.pink}
-label-disconnected-background = ${colors.module-background}
+label-disconnected =   disconnected
+label-disconnected-foreground = ${colors.background-alt}
+; label-disconnected-background = ${colors.module-background}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = ${colors.pink-alt}
 
 [module/eth]
 type = internal/network
@@ -315,50 +437,49 @@ interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.pink-alt}
 label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-foreground = ${colors.pink-alt}
 
 [module/date]
 type = internal/date
 interval = 5
 
-date = %a %d %b
+date = %l:%M %p
+date-alt = %a %d %b
 
-time = %l:%M %p
-
-format-prefix = "   "
-format-prefix-foreground = #46d9ff
-format-prefix-background = ${colors.module-background}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+; format-prefix-background = ${colors.module-background}
 ; format-underline = #46d9ff
 
-label = %date% - %time%
-label-foreground = #46d9ff
-label-background = ${colors.module-background}
+label = %date%
+label-foreground = ${colors.foreground-alt}
+; label-background = ${colors.module-background}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-format-volume-prefix = "    "
-format-volume-prefix-foreground = ${colors.green}
-format-volume-prefix-background = ${colors.module-background}
+format-volume-prefix = "  "
+format-volume-prefix-foreground = ${colors.background-alt}
+; format-volume-prefix-background = ${colors.module-background}
 label-volume = %percentage%%
-label-volume-foreground = ${colors.green}
-label-volume-background = ${colors.module-background}
-; format-volume-underline = ${colors.green}
+label-volume-foreground = ${colors.background-alt}
+; label-volume-background = ${colors.module-background}
+; format-volume-underline = ${colors.pink}
 
-format-muted-prefix = "    "
-format-muted-prefix-foreground = #FFB86C
-format-muted-prefix-background = ${colors.module-background}
+format-muted-prefix = "  "
+format-muted-prefix-foreground = ${colors.background-alt}
+; format-muted-prefix-background = ${colors.module-background}
 label-muted = muted
-label-muted-foreground = #FFB86C
-label-muted-background = ${colors.module-background}
+label-muted-foreground = ${colors.background-alt}
+; label-muted-background = ${colors.module-background}
 ; format-muted-underline = "#FFB86C"
 
 click-right = ~/.config/rofi/applets/bin/volume.sh
@@ -378,7 +499,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.pink-alt}
 
 [module/alsa]
 type = internal/alsa
@@ -388,7 +509,7 @@ label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.pink-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
@@ -406,7 +527,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.pink-alt}
 
 [module/battery]
 type = custom/script
@@ -417,28 +538,28 @@ exec = "echo $(acpi -b | cut -d',' -f2 | tr -d ' ',\%) %"
 tail = true
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = #c792ea
-format-charging-background = ${colors.module-background}
+format-charging-foreground = ${colors.pink}
+; format-charging-background = ${colors.module-background}
 ; format-charging-prefix = "     "
 ; format-charging-prefix-foreground = #c792ea
-label-charging-foreground = #c792ea
-label-charging-background = ${colors.module-background}
+label-charging-foreground = ${colors.foreground-alt}
+; label-charging-background = ${colors.module-background}
 ; format-charging-underline = #c792ea
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-foreground = #c792ea
-format-discharging-background = ${colors.module-background}
+format-discharging-foreground = ${colors.foreground-alt}
+; format-discharging-background = ${colors.module-background}
 ; format-discharging-prefix = "     "
 ; format-discharging-prefix-foreground = #c792ea
 ; format-discharging-underline = #c792ea
 
 label = %output%
 format = <label>
-format-foreground = #c792ea
-format-background = ${colors.module-background}
-format-prefix = "     "
-format-prefix-foreground = #c792ea
-format-prefix-background = ${colors.module-background}
+format-foreground = ${colors.foreground-alt}
+; format-background = ${colors.module-background}
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+; format-prefix-background = ${colors.module-background}
 ; format-full-underline = #c792ea
 
 click-left = ~/.config/rofi/applets/bin/battery.sh
@@ -448,15 +569,15 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-foreground = #c792ea
 
-animation-charging-0 = "    "
-animation-charging-1 = "    "
-animation-charging-2 = "    "
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
 animation-charging-foreground = #c792ea
 animation-charging-framerate = 750
 
-animation-discharging-0 = "     "
-animation-discharging-1 = "     "
-animation-discharging-2 = "     "
+animation-discharging-0 = "  "
+animation-discharging-1 = "  "
+animation-discharging-2 = "  "
 animation-discharging-foreground = #c792ea
 animation-discharging-framerate = 750
 
@@ -472,19 +593,19 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.green}
+label-warn-foreground = ${colors.pink}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.pink-alt}
 
 [module/powermenu]
 type = custom/script
 
 exec = echo Click to run exit script
-format = 
-format-foreground = ${colors.green}
+format = "  "
+format-foreground = ${colors.pink}
 
 click-left = python3 ~/.config/dmenu/exit.py
 
@@ -507,20 +628,20 @@ icon-8 = 9;
 icon-9 = 10;
 icon-default = 1
 format = <label-state>
-label-active = "%name%"
+label-active = "      "
 label-active-foreground = ${colors.yellow}
-label-active-background = ${colors.module-background}
-; label-active-underline = ${colors.red}
-label-occupied = "%name%"
-label-occupied-background = ${colors.module-background}
-label-occupied-foreground = ${colors.red}
-label-occupied-underline = ${colors.wsbackground}
+; label-active-background = ${colors.module-background}
+; label-active-underline = ${colors.pink}
+label-occupied = "      "
+; label-occupied-background = ${colors.module-background}
+label-occupied-foreground = ${colors.yellow}
+; label-occupied-underline = ${colors.pink}
 label-urgent = "%name%"
-label-urgent-foreground = ${colors.urgent}
-label-urgent-underline = ${colors.urgent}
-label-empty = "%name%"
-label-empty-background = ${colors.module-background}
-label-empty-foreground = ${colors.pink}
+label-urgent-foreground = ${colors.pink}
+label-urgent-underline = ${colors.pink}
+label-empty = "      "
+; label-empty-background = ${colors.module-background}
+label-empty-foreground = ${colors.yellow}
 label-empty-underline = ${colors.wsbackground}
 
 [module/uptime]
@@ -530,11 +651,11 @@ tail = true
 exec = ~/.config/polybar/scripts/uptime.sh
 
 format =     <label>
-format-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.pink-alt}
 format-background = ${colors.module-background}
 ; format-background = ${colors.shade16}
 ; format-overline = ${colors.background}
-; format-underline = ${colors.foreground-alt}
+; format-underline = ${colors.pink-alt}
 
 label = %output%
 
@@ -545,9 +666,9 @@ interval = 10
 tail = true
 
 format =     <label>
-format-foreground = ${colors.green}
+format-foreground = ${colors.pink}
 format-background = ${colors.module-background}
-; format-underline = ${colors.green}
+; format-underline = ${colors.pink}
 label = %output% update(s) left
 
 click-left = alacritty -e yay -Syyu
