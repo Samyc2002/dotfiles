@@ -1,24 +1,25 @@
--- General functionallity and apperence
-require "mbfsNeovim.options"
-require "mbfsNeovim.keybindings"
-require "mbfsNeovim.plugins"
-require "mbfsNeovim.lualine"
-require "mbfsNeovim.colorschemes"
-require "mbfsNeovim.telescope"
-require "mbfsNeovim.alpha"
-require "mbfsNeovim.nvim-tree"
-require "mbfsNeovim.bufferline"
+-- General Settings for nvim
+require "nvim.settings"
+require "nvim.keybindings"
+require "nvim.plugins"
+require "nvim.lualine"
+require "nvim.colorschemes"
+require "nvim.telescope"
+require "nvim.alpha"
+require "nvim.nvim-tree"
+require "nvim.bufferline"
+--[[ require "nvim.silicon" ]]
+-- require "nvim.whichkey"
 
--- Completion engine and Leungage server
-require "mbfsNeovim.cmp"
-require "mbfsNeovim.lsp"
+-- Completion engine and Language server
+require "nvim.mason"
+require "nvim.lsp"
+require "nvim.cmp"
+require "nvim.saga"
 
 -- Programming
-require "mbfsNeovim.autopairs"
-require "mbfsNeovim.treesitter"
-require "mbfsNeovim.gitsigns"
-require "mbfsNeovim.comments"
-require "mbfsNeovim.toggleterm"
-
--- Snippets, Linters and Formatters
-require "mbfsNeovim.snippets"
+require "nvim.autopairs"
+require "nvim.treesitter"
+require "nvim.gitsigns"
+require "nvim.comments"
+require "nvim.toggleterm"

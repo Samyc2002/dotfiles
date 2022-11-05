@@ -183,7 +183,8 @@ super + alt + e
 super + a
 	  emacsclient -c -a "emacs"
 super + e
-		xdotool key super+a; sleep 1; xdotool key super+t
+    neovide &
+		# xdotool key super+a; sleep 1; xdotool key super+t
 
 # Discord
 super + d

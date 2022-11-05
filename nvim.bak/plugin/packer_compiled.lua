@@ -149,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/formatter.nvim",
-    url = "https://github.com/mhartington/formatter.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -169,11 +164,6 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -183,16 +173,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
-  },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
   },
   molokai = {
     loaded = true,
@@ -224,15 +204,10 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
+  ["nvim-lsp-installer"] = {
     loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-lint"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-lint",
-    url = "https://github.com/mfussenegger/nvim-lint"
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -298,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
-  },
-  ["silicon.nvim"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/silicon.nvim",
-    url = "https://github.com/krivahtoo/silicon.nvim"
   },
   ["space-vim-dark"] = {
     loaded = true,

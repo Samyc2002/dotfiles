@@ -31,6 +31,17 @@ local mode = {
 	end,
 }
 
+local filename = {
+	"filename",
+  path = 1,
+  symbols = {
+    modified = '[+]',      -- Text to show when the file is modified.
+    readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
+    unnamed = '[No Name]', -- Text to show for unnamed buffers.
+    newfile = '[New]',     -- Text to show for new created file before first writting
+  }
+}
+
 local filetype = {
 	"filetype",
 	icons_enabled = false,
@@ -75,7 +86,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { mode },
 		lualine_b = { branch, diagnostics },
-		lualine_c = {},
+		lualine_c = { filename },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },
@@ -92,3 +103,4 @@ lualine.setup({
 	tabline = {},
 	extensions = {},
 })
+

@@ -25,7 +25,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gP='git pull'
-alias blf='sudo modprobe btusb && sudo systemctl start bluetooth &&  sudo systemctl enable bluetooth'
+alias startup='sudo modprobe btusb && sudo systemctl start bluetooth && sudo systemctl enable bluetooth; sudo systemctl start warp-svc'
 # alias emacsclient="emacsclient -c -a 'emacs'"
 alias emacsclient="emacsclient -c"
 
@@ -54,3 +54,6 @@ export dmenu_run="env LC_ALL=en_US.UTF-8 dmenu_run"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #neofetch
+
+#[ -f "/home/samy/.ghcup/env" ] && source "/home/samy/.ghcup/env" # ghcup-env
+[ -f "/home/samy/.ghcup/env" ] && source "/home/samy/.ghcup/env" # ghcup-env
