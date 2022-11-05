@@ -32,9 +32,9 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<C-l>", ":bnext<CR>", opts)
-keymap("n", "<C-h>", ":bprevious<CR>", opts)
-keymap("n", "<C-c>", ":bdelete<CR>", opts)
+keymap("n", "<leader>bl", ":bnext<CR>", opts)
+keymap("n", "<leader>bh", ":bprevious<CR>", opts)
+keymap("n", "<leader>bc", ":bdelete<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -84,6 +84,7 @@ keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>h", ":nohlsearch<CR>", opts)
 keymap("n", "<esc>", ":noh<CR>", opts)
 keymap("n", ":w<CR>", ":Prettier<CR>:w<CR>", opts)
+keymap("n", "<leader>g", ":LazyGit<CR>", opts)
 
 -- Similar keybinds as in alpha dashboard
 keymap("n", "<leader>N", ":ene <BAR> startinsert <CR>", opts)

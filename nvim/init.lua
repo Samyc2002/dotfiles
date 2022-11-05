@@ -8,6 +8,7 @@ require "nvim.telescope"
 require "nvim.alpha"
 require "nvim.nvim-tree"
 require "nvim.bufferline"
+require "nvim.winsep"
 --[[ require "nvim.silicon" ]]
 -- require "nvim.whichkey"
 

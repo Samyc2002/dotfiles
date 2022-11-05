@@ -8,8 +8,7 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load({
-  paths = { "./snippetscollection" },
+require("luasnip.loaders.from_vscode").lazy_load({
   include = { "cpp", "javascriptreact", "typescriptreact", "javascript", "typescript" }
 })
 
@@ -52,6 +51,7 @@ cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      --[[ luasnip.loaders.from_vscode.lazy_load({ paths = { "./snippetscollection" }, include = { "cpp", "javascriptreact", "typescriptreact", "javascript", "typescript" } }) ]]
     end,
   },
   mapping = {

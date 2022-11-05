@@ -46,3 +46,4 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+--[[ vim.cmd "hi VertSplit ctermbg=NONE guibg=NONE" ]]

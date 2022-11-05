@@ -30,18 +30,18 @@ null_ls.setup({
     hover.dictionary,
     hover.printenv,
     -- Diagnostics
-    diagnostics.cspell,
+    --[[ diagnostics.cspell, ]]
     diagnostics.clang_check,
     diagnostics.commitlint,
     diagnostics.cppcheck,
     diagnostics.cpplint,
-    diagnostics.cslint,
+    --[[ diagnostics.cslint, ]]
     diagnostics.eslint,
     diagnostics.eslint_d,
     diagnostics.flake8,
     diagnostics.hadolint,
     diagnostics.jsonlint,
-    diagnostics.luacheck,
+    --[[ diagnostics.luacheck, ]]
     diagnostics.markdownlint,
     diagnostics.pylint,
     diagnostics.stylint,
@@ -49,13 +49,13 @@ null_ls.setup({
     diagnostics.tsc,
     diagnostics.zsh,
     -- Code Actions
-    code_actions.cspell,
+    --[[ code_actions.cspell, ]]
     code_actions.eslint,
     code_actions.eslint_d,
     code_actions.gitsigns,
     code_actions.proselint,
-    code_actions.spellcheck,
-    completions.luasnip,
-    completions.tags,
+    --[[ code_actions.spellcheck, ]]
+    --[[ completions.luasnip, ]]
+    --[[ completions.tags, ]]
   },
 })

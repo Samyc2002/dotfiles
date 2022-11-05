@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
   use 'machakann/vim-highlightedyank' -- Highlight text being yanked
   use 'ryanoasis/vim-devicons' -- Adds icons
   use "folke/which-key.nvim" -- Autosuggests commands
+  use "nvim-zh/colorful-winsep.nvim" -- Make active window colorful
 
   --Programming
   use "windwp/nvim-autopairs" --autopairs
@@ -61,6 +62,7 @@ return require('packer').startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   }
+  use "kdheepak/lazygit.nvim"
 
   --Treesitter
   use "nvim-treesitter/nvim-treesitter" --Syntax highlighting

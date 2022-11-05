@@ -14,4 +14,4 @@ end
 
 require "nvim.lsp.lsp-installer"
 require("nvim.lsp.handlers").setup()
--- require "nvim.lsp.null-ls"
+require "nvim.lsp.null-ls"
