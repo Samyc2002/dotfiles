@@ -70,7 +70,7 @@ font-2 = Font Awesome 5 Free Solid:size=10;4
 font-3 = FiraCode Nerd Font Mono:style=Regular:size=15;4
 font-4 = FiraCode Nerd Font Mono:style=Regular:size=18;4
 
-modules-left = sep xwindow
+modules-left = sep 
 ; modules-left = text powermenu text text text text left xworkspaces right text text text text xwindow
 ; modules-center = xworkspaces
 ; modules-right = date text pulseaudio text xbacklight text cpu text memory text filesystem text wlan text battery 

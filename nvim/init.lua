@@ -9,8 +9,9 @@ require "nvim.alpha"
 require "nvim.nvim-tree"
 require "nvim.bufferline"
 require "nvim.winsep"
---[[ require "nvim.silicon" ]]
--- require "nvim.whichkey"
+require "nvim.devicons"
+require "nvim.silicon"
+--[[ require "nvim.whichkey" ]]
 
 -- Completion engine and Language server
 require "nvim.mason"

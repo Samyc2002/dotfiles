@@ -32,15 +32,17 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<leader>bl", ":bnext<CR>", opts)
-keymap("n", "<leader>bh", ":bprevious<CR>", opts)
-keymap("n", "<leader>bc", ":bdelete<CR>", opts)
+keymap("n", "L", ":bnext<CR>", opts)
+keymap("n", "H", ":bprevious<CR>", opts)
+keymap("n", "<C-L>", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<C-H>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "C", ":bdelete<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-keymap("n", "<A-Down>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-Up>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
+keymap("n", "<A-Down>", "<Esc>:m .+1<CR>==", opts)
+keymap("n", "<A-Up>", "<Esc>:m .-2<CR>==", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode
@@ -85,19 +87,26 @@ keymap("n", "<leader>h", ":nohlsearch<CR>", opts)
 keymap("n", "<esc>", ":noh<CR>", opts)
 keymap("n", ":w<CR>", ":Prettier<CR>:w<CR>", opts)
 keymap("n", "<leader>g", ":LazyGit<CR>", opts)
+keymap("n", "<leader>st", ":ASToggle<CR>", opts)
+keymap("n", "<leader>pp", ":Telescope projects<CR>", opts)
+
+-- Zen Mode bindings
+keymap("n", "<leader>zn", ":TZNarrow<CR>", opts)
+keymap("n", "<leader>zf", ":TZFocus<CR>", opts)
+keymap("n", "<leader>zm", ":<CR>", opts)
+keymap("n", "<leader>za", ":ASToggle<CR>", opts)
 
 -- Similar keybinds as in alpha dashboard
 keymap("n", "<leader>N", ":ene <BAR> startinsert <CR>", opts)
 keymap("n", "<leader>f", ":Telescope find_files <CR>", opts)
 keymap("n", "<leader>t", ":Telescope live_grep <CR>", opts)
 keymap("n", "<leader>r", ":Telescope oldfiles <CR>", opts)
-keymap("n", "<leader>d", ":e ~/Projects/ <CR>", opts)
-keymap("n", "<leader>dp", ":e ~/Projects/ <CR>", opts)
-keymap("n", "<leader>ds", ":e ~/Projects/react-n-ftend/ <CR>", opts)
-keymap("n", "<leader>n", ":NvimTreeToggle ~/Documents <CR>", opts)
-keymap("n", "<leader>ni", ":e ~/Documents/Ideas.md <CR>", opts)
-keymap("n", "<leader>nn", ":e ~/Documents/Notes.md <CR>", opts)
-keymap("n", "<leader>nm", ":e ~/Documents/MoMs.md <CR>", opts)
+keymap("n", "<leader>p", ":e ~/Projects/ <CR>", opts)
+keymap("n", "<leader>ps", ":e ~/Projects/react-n-ftend/ <CR>", opts)
+-- keymap("n", "<leader>n", ":NvimTreeToggle ~/Documents <CR>", opts)
+-- keymap("n", "<leader>ni", ":e ~/Documents/Ideas.md <CR>", opts)
+-- keymap("n", "<leader>nn", ":e ~/Documents/Notes.md <CR>", opts)
+-- keymap("n", "<leader>nm", ":e ~/Documents/MoMs.md <CR>", opts)
 keymap("n", "<leader>c", ":e ~/configs <CR>", opts)
 keymap("n", "<leader>cw", ":e ~/configs/bspwm/bspwmrc <CR>", opts)
 keymap("n", "<leader>cn", ":e ~/configs/nvim/init.lua <CR>", opts)

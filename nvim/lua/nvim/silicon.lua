@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 silicon.setup({
+  output = 'string',
   font = 'Fira Code=16',
-  theme = 'Monokai Extended',
+  theme = 'Dracula',
 })

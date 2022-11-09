@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/aquarium-vim",
     url = "https://github.com/frenzyexists/aquarium-vim"
   },
+  ["auto-save.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
+    url = "https://github.com/Pocco81/auto-save.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -168,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -342,6 +352,16 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/opt/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["true-zen.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
+  },
+  ["typescript.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/typescript.nvim",
+    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+  },
   vim = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim",
@@ -406,6 +426,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-vscode-theme",
     url = "https://github.com/dunstontc/vim-vscode-theme"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
   },
   ["which-key.nvim"] = {
     loaded = true,

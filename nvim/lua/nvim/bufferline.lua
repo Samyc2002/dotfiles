@@ -6,7 +6,7 @@ end
 bufferline.setup {
   options = {
     mode = "buffers",
-    numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+    numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     close_command = "bdelete", -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete", -- can be a string | function, see "Mouse actions"
     left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"

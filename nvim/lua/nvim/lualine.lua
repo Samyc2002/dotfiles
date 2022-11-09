@@ -7,6 +7,8 @@ local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
 
+local seperators = require("constants.icons").statusline_separators
+
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
@@ -56,7 +58,7 @@ local branch = {
 
 local location = {
 	"location",
-	padding = 0,
+	padding = 3,
 }
 
 -- cool function for progress
@@ -77,9 +79,8 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		--[[ section_separators = { left = "", right = "" }, ]]
+		component_separators = seperators.block,
+		section_separators = seperators.block,
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
 	},
