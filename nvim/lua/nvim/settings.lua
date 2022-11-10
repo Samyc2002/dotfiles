@@ -1,3 +1,6 @@
+-- Load Nvim Faster
+require "impatient"
+
 local options = {
 	backup = false,
 	clipboard = "unnamedplus",
@@ -32,9 +35,10 @@ local options = {
 	wrap = false,
 	scrolloff = 8,
 	sidescrolloff = 8,
-	guifont = "Fira Code:h11",
+	guifont = "JetBrainsMono Nerd Font:h11",
 	fillchars = "vert:│",
 	laststatus = 3,
+  linespace = 3
 -- 	colorcolumn = "80",
 }
 
@@ -44,6 +48,8 @@ for key, value in pairs(options) do
 	vim.opt[key] = value
 end
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
---[[ vim.cmd "hi VertSplit ctermbg=NONE guibg=NONE" ]]
+vim.cmd [[
+set whichwrap+=<,>,[,],h,l
+set iskeyword+=-
+hi VertSplit ctermbg=NONE guibg=NONE
+]]

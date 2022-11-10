@@ -1,6 +1,3 @@
--- Load Nvim Faster
-require "impatient"
-
 -- General Settings for nvim
 require "nvim.settings"
 require "nvim.keybindings"
@@ -14,6 +11,7 @@ require "nvim.bufferline"
 require "nvim.winsep"
 require "nvim.devicons"
 require "nvim.silicon"
+require "nvim.cursorline"
 require "nvim.indentblankline"
 --[[ require "nvim.whichkey" ]]
 

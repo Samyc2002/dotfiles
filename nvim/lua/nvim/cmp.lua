@@ -9,6 +9,7 @@ if not snip_status_ok then
 end
 
 require("luasnip.loaders.from_vscode").lazy_load({
+  paths = { "./snippets" },
   include = { "cpp", "javascriptreact", "typescriptreact", "javascript", "typescript" }
 })
 

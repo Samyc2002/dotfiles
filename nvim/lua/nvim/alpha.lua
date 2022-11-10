@@ -35,7 +35,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("SPC n m", "       MoMs", ":e ~/Documents/MoMs.md <CR>"),
 	dashboard.button("SPC c", "  Configuration files", ":e ~/configs <CR>"),
 	dashboard.button("SPC c w", "       Window Manager", ":e ~/configs/bspwm/bspwmrc <CR>"),
-	dashboard.button("SPC c n", "       Neovim", ":e ~/configs/nvim/init.lua <CR>"),
+	dashboard.button("SPC c n", "       Neovim", ":e ~/configs/nvim<CR>"),
 	dashboard.button("SPC c k", "       Keybinds", ":e ~/configs/sxhkd/sxhkdrc <CR>"),
 	dashboard.button("SPC c l", "       Lock Screen", ":e ~/configs/betterlockscreen/betterlockscreenrc <CR>"),
 	dashboard.button("SPC q", "  Quit Neovim", ":qa<CR>"),

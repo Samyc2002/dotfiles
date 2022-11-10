@@ -23,7 +23,7 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = { added = "✓ ", modified = "! ", removed = "✘ " }, -- changes diff symbols
-  cond = hide_in_width
+	cond = hide_in_width,
 }
 
 local mode = {
@@ -35,18 +35,18 @@ local mode = {
 
 local filename = {
 	"filename",
-  path = 1,
-  symbols = {
-    modified = '[+]',      -- Text to show when the file is modified.
-    readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
-    unnamed = '[No Name]', -- Text to show for unnamed buffers.
-    newfile = '[New]',     -- Text to show for new created file before first writting
-  }
+	path = 1,
+	symbols = {
+		modified = "[+]", -- Text to show when the file is modified.
+		readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+		unnamed = "[No Name]", -- Text to show for unnamed buffers.
+		newfile = "[New]", -- Text to show for new created file before first writting
+	},
 }
 
 local filetype = {
 	"filetype",
-	icons_enabled = false,
+	icons_enabled = true,
 	icon = nil,
 }
 
@@ -58,7 +58,6 @@ local branch = {
 
 local location = {
 	"location",
-	padding = 3,
 }
 
 -- cool function for progress
@@ -91,7 +90,7 @@ lualine.setup({
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },
-		lualine_z = { progress },
+		lualine_z = { "hostname" },
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -102,6 +101,5 @@ lualine.setup({
 		lualine_z = {},
 	},
 	tabline = {},
-	extensions = {},
+	extensions = { "quickfix", "fugitive", "fzf" },
 })
-

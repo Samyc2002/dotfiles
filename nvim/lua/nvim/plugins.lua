@@ -45,7 +45,8 @@ return require("packer").startup(function(use)
 	use("machakann/vim-highlightedyank") -- Highlight text being yanked
 	use("ryanoasis/vim-devicons") -- Adds icons
 	use({ "folke/which-key.nvim" }) -- Autosuggests commands
-	use("nvim-zh/colorful-winsep.nvim") -- Make active window colorful
+	--[[ use("nvim-zh/colorful-winsep.nvim") -- Make active window colorful ]]
+	use("yamatsum/nvim-cursorline") -- Highlight words and lines on the cursor for Neovim
 
 	--Programming
 	use("windwp/nvim-autopairs") --autopairs
@@ -68,7 +69,7 @@ return require("packer").startup(function(use)
 	use("kdheepak/lazygit.nvim")
 	use("Pocco81/auto-save.nvim") -- Autosaves files on exiting insert
 	use("Pocco81/true-zen.nvim") -- Autosaves files on exiting insert
-  use "jose-elias-alvarez/typescript.nvim" -- Fixes tsserver issues
+	use("jose-elias-alvarez/typescript.nvim") -- Fixes tsserver issues
 
 	--Treesitter
 	use("nvim-treesitter/nvim-treesitter") --Syntax highlighting
