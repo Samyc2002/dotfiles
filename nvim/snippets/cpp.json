@@ -157,83 +157,57 @@
   },
   "Vector of long long integers": {
     "prefix": "vi",
-    "body": [
-      "vector<ll>"
-    ],
+    "body": ["vector<ll>"],
     "description": "Vector of long long integers"
   },
   "Vector of strings": {
     "prefix": "vs",
-    "body": [
-      "vector<string>"
-    ],
+    "body": ["vector<string>"],
     "description": "Vector of strings"
   },
   "2D vector of long long integers": {
     "prefix": "vii",
-    "body": [
-      "vector<vector<ll>>"
-    ],
+    "body": ["vector<vector<ll>>"],
     "description": "2D vector of long long integers"
   },
   "Pair of long long integers": {
     "prefix": "pii",
-    "body": [
-      "pair<ll, ll>"
-    ],
+    "body": ["pair<ll, ll>"],
     "description": "Pair of long long integers"
   },
   "Unordered map of long long integers": {
     "prefix": "mii",
-    "body": [
-      "unordered_map<ll, ll>"
-    ],
+    "body": ["unordered_map<ll, ll>"],
     "description": "Unordered map of long long integers"
   },
   "Map of long long integers": {
     "prefix": "omii",
-    "body": [
-      "map<ll, ll>"
-    ],
+    "body": ["map<ll, ll>"],
     "description": "Map of long long integers"
   },
   "Unordered set of long long integers": {
     "prefix": "si",
-    "body": [
-      "unordered_set<ll>"
-    ],
+    "body": ["unordered_set<ll>"],
     "description": "Unordered set of long long integers"
   },
   "Map of long long integers": {
     "prefix": "osi",
-    "body": [
-      "set<ll, ll>"
-    ],
+    "body": ["set<ll, ll>"],
     "description": "Set of long long integers"
   },
   "Increasing for loop": {
     "prefix": "foi",
-    "body": [
-      "for(ll i=0; i<n; i++) {",
-      "",
-      "}"
-    ],
+    "body": ["for(ll i=0; i<n; i++) {", "", "}"],
     "description": "Increasing for loop"
   },
   "Decreasing for loop": {
     "prefix": "fod",
-    "body": [
-      "for(ll i=n-1; i>=0; i--) {",
-      "",
-      "}"
-    ],
+    "body": ["for(ll i=n-1; i>=0; i--) {", "", "}"],
     "description": "Decreasing for loop"
   },
   "Mod": {
     "prefix": "mod",
-    "body": [
-      "const ll MOD = 1000000007"
-    ],
+    "body": ["const ll MOD = 1000000007"],
     "description": "Modulo 10^9 + 7"
   }
 }

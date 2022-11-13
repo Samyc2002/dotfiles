@@ -179,12 +179,13 @@ super + shift + p
 super + alt + e
 	  pcmanfm
 
-# Emacs
+# Neovim in GUI
 super + a
-	  emacsclient -c -a "emacs"
-super + e
     neovide &
-		# xdotool key super+a; sleep 1; xdotool key super+t
+
+# Opens neovide and focusses on it cuz neovide doesn't for some reason
+super + e
+		xdotool key super+a; sleep 1; xdotool key super+l
 
 # Discord
 super + d

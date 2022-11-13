@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["colorful-winsep.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/colorful-winsep.nvim",
+    url = "https://github.com/nvim-zh/colorful-winsep.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -224,6 +229,11 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
+  ["numb.nvim"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/numb.nvim",
+    url = "https://github.com/nacro90/numb.nvim"
+  },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim",
@@ -239,11 +249,6 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-cursorline"] = {
-    loaded = true,
-    path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
-    url = "https://github.com/yamatsum/nvim-cursorline"
-  },
   ["nvim-dap"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-dap",
@@ -258,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/nvim-pack/nvim-spectre"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -382,6 +392,11 @@ _G.packer_plugins = {
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-code-dark",
     url = "https://github.com/tomasiser/vim-code-dark"
   },
+  ["vim-code-runner"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-code-runner",
+    url = "https://github.com/xianzhon/vim-code-runner"
+  },
   ["vim-css-color.git"] = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-css-color.git",
@@ -396,6 +411,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
     url = "https://github.com/machakann/vim-highlightedyank"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/samy/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-material"] = {
     loaded = true,

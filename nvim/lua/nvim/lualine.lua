@@ -11,7 +11,7 @@ local seperators = require("constants.icons").statusline_separators
 
 local diagnostics = {
 	"diagnostics",
-	sources = { "nvim_diagnostic" },
+	sources = { "nvim_lsp" },
 	sections = { "error", "warn" },
 	symbols = { error = " ", warn = " " },
 	colored = false,
@@ -22,7 +22,7 @@ local diagnostics = {
 local diff = {
 	"diff",
 	colored = false,
-	symbols = { added = "✓ ", modified = "! ", removed = "✘ " }, -- changes diff symbols
+	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
 	cond = hide_in_width,
 }
 
@@ -37,10 +37,10 @@ local filename = {
 	"filename",
 	path = 1,
 	symbols = {
-		modified = "[+]", -- Text to show when the file is modified.
-		readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
-		unnamed = "[No Name]", -- Text to show for unnamed buffers.
-		newfile = "[New]", -- Text to show for new created file before first writting
+		modified = "", -- Text to show when the file is modified.
+		readonly = "", -- Text to show when the file is non-modifiable or readonly.
+		unnamed = "", -- Text to show for unnamed buffers.
+		newfile = "", -- Text to show for new created file before first writting
 	},
 }
 
@@ -48,6 +48,9 @@ local filetype = {
 	"filetype",
 	icons_enabled = true,
 	icon = nil,
+	fmt = function(str)
+		return str .. " "
+	end,
 }
 
 local branch = {
@@ -60,18 +63,28 @@ local location = {
 	"location",
 }
 
+local fileformat = {
+	"fileformat",
+	icons_enabled = true,
+	symbols = {
+		unix = "LF",
+		dos = "CRLF",
+		mac = "CR",
+	},
+}
+
 -- cool function for progress
-local progress = function()
-	local current_line = vim.fn.line(".")
-	local total_lines = vim.fn.line("$")
-	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
-	local line_ratio = current_line / total_lines
-	local index = math.ceil(line_ratio * #chars)
-	return chars[index]
-end
+--[[ local progress = function() ]]
+--[[ 	local current_line = vim.fn.line(".") ]]
+--[[ 	local total_lines = vim.fn.line("$") ]]
+--[[ 	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" } ]]
+--[[ 	local line_ratio = current_line / total_lines ]]
+--[[ 	local index = math.ceil(line_ratio * #chars) ]]
+--[[ 	return chars[index] ]]
+--[[ end ]]
 
 local spaces = function()
-	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+	return " " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
 lualine.setup({
@@ -85,18 +98,17 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { mode },
-		lualine_b = { branch, diagnostics },
-		lualine_c = { filename },
-		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, spaces, "encoding", filetype },
-		lualine_y = { location },
+		lualine_b = { branch },
+		lualine_c = { diagnostics, filename, diff },
+		lualine_x = { fileformat, spaces, location },
+		lualine_y = { filetype },
 		lualine_z = { "hostname" },
 	},
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { "filename" },
-		lualine_x = { "location" },
+		lualine_c = {},
+		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {},
 	},

@@ -1,11 +1,11 @@
 -- Load Nvim Faster
-require "impatient"
+require("impatient")
 
 local options = {
 	backup = false,
 	clipboard = "unnamedplus",
 	cmdheight = 1,
-	completeopt = {"menuone","noselect"},
+	completeopt = { "menuone", "noselect" },
 	conceallevel = 0,
 	fileencoding = "utf-8",
 	hlsearch = true,
@@ -13,7 +13,7 @@ local options = {
 	mouse = "a",
 	pumheight = 10,
 	showmode = false,
-	showtabline = 2,
+	showtabline = 3,
 	smartcase = true,
 	smartindent = true,
 	splitbelow = true,
@@ -38,18 +38,18 @@ local options = {
 	guifont = "JetBrainsMono Nerd Font:h11",
 	fillchars = "vert:│",
 	laststatus = 3,
-  linespace = 3
--- 	colorcolumn = "80",
+	linespace = 3,
+	-- 	colorcolumn = "80",
 }
 
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append("c")
 
 for key, value in pairs(options) do
 	vim.opt[key] = value
 end
 
-vim.cmd [[
+vim.cmd([[
 set whichwrap+=<,>,[,],h,l
 set iskeyword+=-
 hi VertSplit ctermbg=NONE guibg=NONE
-]]
+]])
