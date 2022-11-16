@@ -94,8 +94,8 @@ local keybinds = {
     { binding = "<esc>", actual = ":noh<CR>" },
     { binding = ":w<CR>", actual = ":Format<CR>:w<CR>" },
     { binding = "<leader>st", actual = ":ASToggle<CR>" },
-    { binding = "<leader>p", actual = ":Telescope projects<CR>" },
-    { binding = "<leader>ss", actual = ":'<,'>Silicon<CR>" },
+    { binding = "<leader>pp", actual = ":Telescope projects<CR>" },
+    { binding = "<leader>ps", actual = ":'<,'>Silicon<CR>" },
     { binding = "<leader>bf", actual = ":Format<CR>" },
   },
 

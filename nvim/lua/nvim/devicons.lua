@@ -8,5 +8,5 @@ local icons = require("constants.icons")
 devicons.setup({
 	override = icons.devicons,
 	color_icons = true,
-	default = false,
+	default = true,
 })

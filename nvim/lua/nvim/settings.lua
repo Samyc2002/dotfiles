@@ -39,7 +39,6 @@ local options = {
 	fillchars = "vert:│",
 	laststatus = 3,
 	linespace = 3,
-	-- 	colorcolumn = "80",
 }
 
 vim.opt.shortmess:append("c")
