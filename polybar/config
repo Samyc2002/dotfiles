@@ -29,7 +29,7 @@
 ;==========================================================
 
 [colors]
-background = #282c34
+background = #33282c34
 transparent = #00FFFFFF
 module-background = #282c34
 background-alt = #969696
@@ -99,11 +99,14 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/topbarCenter]
-width = 16%
+; width = 16%
+width = 100%
 height = 30
-offset-x = 40.25%
-offset-y = 0.5%
-radius = 10.0
+; offset-x = 40.25%
+offset-x = 0%
+offset-y = 0%
+; offset-y = 0.5%
+radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
@@ -116,7 +119,7 @@ border-size = 0
 border-color = #00ffffff
 
 padding-left = 5
-padding-right = 0
+padding-right = 5
 
 module-margin-left = 0
 module-margin-right = 0
@@ -127,18 +130,18 @@ font-2 = Font Awesome 5 Free Solid:size=10;4
 font-3 = FiraCode Nerd Font Mono:style=Regular:size=15;4
 font-4 = FiraCode Nerd Font Mono:style=Regular:size=18;4
 
-; modules-left = xwindow 
+modules-left = sep 
 ; modules-left = text powermenu text text text text left xworkspaces right text text text text xwindow
 modules-center = xworkspaces
-; modules-right = date text pulseaudio text xbacklight text cpu text memory text filesystem text wlan text battery 
+modules-right = date text pulseaudio text memory text cpu text filesystem text wlan text battery 
 
-tray-position = none
-tray-maxsize = 16
+tray-position = left 
+ray-maxsize = 16
 tray-scale = 1.0
 tray-padding = 0
 tray-offset-y = 0
-tray-offset-x = 10.0
-tray-detached = false 
+tray-offset-x = 5.0
+tray-detached = true 
 tray-background = ${colors.background}
 
 wm-restack = bspwm
