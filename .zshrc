@@ -13,9 +13,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ls='exa -lah'
-alias clear='clear && colorscript random'
+alias cls='clear' #&& colorscript random'
 alias py='python3'
-alias cls='clear'
+alias py-2-7-11='~/.localpython/bin/python'
 alias br='broot -dphsg'
 alias python='python3'
 alias vi='nvim'
@@ -37,6 +37,8 @@ export PATH="$PATH:/usr/local/go/bin"
 export TERM="xterm-256color"                      # getting proper colors
 export PATH="$PATH:$HOME/.config/rofi/scripts"
 export CONFIG_DIR="$HOME/.config/lazygit"
+export XDG_DATA_HOME="$HOME/.config"
+export tmux="tmux -u"
 
 # These are for my develoment needs
 export JAVA_HOME=$HOME/jdk-18.0.2.1
@@ -49,7 +51,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 
    # Welcome text
-   clear
+   # clear
 export dmenu_run="env LC_ALL=en_US.UTF-8 dmenu_run"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -58,3 +60,12 @@ export dmenu_run="env LC_ALL=en_US.UTF-8 dmenu_run"
 
 #[ -f "/home/samy/.ghcup/env" ] && source "/home/samy/.ghcup/env" # ghcup-env
 [ -f "/home/samy/.ghcup/env" ] && source "/home/samy/.ghcup/env" # ghcup-env
+
+# Starship prompt
+# eval "$(starship init zsh)"
+#screenfetch
+#colorscript random
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -8,7 +8,7 @@ xsetroot -cursor_name left_ptr &
 /home/samy/.config/polybar/launch.sh &
 nitrogen --restore &
 picom --experimental-backend --config ~/.config/picom/picom.sample.conf &
-# mpv --no-video ~/.config/Startup_Sounds/ubuntu_startup_sound.mp3 &
+mpv --no-video ~/.config/Startup_Sounds/ubuntu_startup_sound.mp3 &
 usr/bin/emacs --daemon
 # xscreensaver -nosplash &
 volumeicon &

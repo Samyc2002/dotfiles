@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 6
+    y: 6
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -169,7 +169,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    # family: Fira Code
+    g family: Fira Code
     family: JetBrainsMono Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
