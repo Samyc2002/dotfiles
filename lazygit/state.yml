@@ -1,6 +1,7 @@
 lastupdatecheck: 1666706125
 recentrepos:
 - /home/samy/configs
+- /home/samy/configs/nvim
 - /home/samy/Projects/shram/shram-webapp
 - /home/samy/Projects/CFL
 - /home/samy/Projects/InterIIT/FRONTEND
@@ -8,7 +9,6 @@ recentrepos:
 - /home/samy/Projects/PARSEC-Web
 - /home/samy/Projects/Anime-Subtitle-Generator
 - /home/samy/Projects/react-n-ftend
-- /home/samy/configs/nvim
 - /home/samy/Documents/Sem5/Digi-Comm
 - /home/samy/Documents/Sem5/MCMP/Lab/Source-Codes
 startuppopupversion: 5
