@@ -1,13 +1,18 @@
 lastupdatecheck: 1666706125
 recentrepos:
 - /home/samy/configs
-- /home/samy/configs/qtile
 - /home/samy/configs/nvim
-- /home/samy/Projects/shram/shram-webapp
-- /home/samy/Projects/CFL
-- /home/samy/Projects/InterIIT/FRONTEND
 - /home/samy/Documents
+- /home/samy/Projects/shram/shram-frontend
+- /home/samy/Documents/Sem6/EDL
 - /home/samy/Projects/PARSEC-Web
+- /home/samy/Projects/Portfolio
+- /home/samy/Obsidian
+- /home/samy/Projects/shram/shram-webapp
+- /home/samy/Projects/InterIIT/FRONTEND
+- /home/samy/Projects/parsec_react_app
+- /home/samy/configs/qtile
+- /home/samy/Projects/CFL
 - /home/samy/Projects/Anime-Subtitle-Generator
 - /home/samy/Projects/react-n-ftend
 - /home/samy/Documents/Sem5/Digi-Comm
