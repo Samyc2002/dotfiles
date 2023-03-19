@@ -27,6 +27,7 @@ alias gp='git push'
 alias gP='git pull'
 alias gb='git branch'
 alias startup='sudo modprobe btusb && sudo systemctl start bluetooth && sudo systemctl enable bluetooth; sudo systemctl start warp-svc'
+alias update='yay -Syyu; flatpak update'
 # alias emacsclient="emacsclient -c -a 'emacs'"
 alias emacsclient="emacsclient -c"
 
